@@ -1,0 +1,42 @@
+<div class="mycontainer" xmlns="http://www.w3.org/1999/html" *ngIf="!isloading">
+  <div class="mycontainer-header">
+    Login
+  </div>
+  <div class="mycontainer-content">
+    <form [formGroup]="formGroup" (ngSubmit)="loginUser()">
+      <table>
+
+
+        <tr>
+          <td>Username</td>
+          <td><input [formControlName]="'username'" type="text" [ngClass]="{'error-input-board' : !formGroup.get('username').valid && formGroup.get('username').touched}">
+            <p *ngIf="!formGroup.get('username').valid && formGroup.get('username').touched"
+               class="error-msg">
+              Can you please enter a valid username
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>Password</td>
+          <td><input type="password" [formControlName]="'password'" [ngClass]="{'error-input-board' : !formGroup.get('password').valid && formGroup.get('password').touched}">
+            <p *ngIf="!formGroup.get('password').valid && formGroup.get('password').touched"
+               class="error-msg">
+              Can you please enter a valid password
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><p><button [disabled]="!formGroup.valid"  type="submit" routerLink="/signup" class="mycontainer-content-signup">LOG IN</button>
+            Dont have an account? <a routerLink="/signup">SIGN UP</a></p></td>
+        </tr>
+      </table>
+      <div *ngIf="isLoginError" class="login-error shake-horizontal">
+        <p> Login Failed. Please check your credentials and try again.</p>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="myspinner" *ngIf="isloading">
+  <app-spinner></app-spinner>
+</div>

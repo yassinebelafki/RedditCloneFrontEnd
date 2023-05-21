@@ -1,0 +1,29 @@
+
+  <div class="mypost">
+    <div class="mypost-vote">
+      <i class="fa-solid fa-arrow-up "  (mouseenter)="isHoveredOnArrowUp=true" (mouseleave)="isHoveredOnArrowUp=false"
+         [ngClass]="{'fa-bounce color-up':isHoveredOnArrowUp}" style="cursor: pointer;"></i>
+      <span class="mypost-vote-number">{{post.voteCount}}</span>
+      <i class="fa-solid fa-arrow-down "  (mouseenter)="isHoveredOnArrowDown=true" (mouseleave)="isHoveredOnArrowDown=false"
+         [ngClass]="{'fa-bounce color-down':isHoveredOnArrowDown}" style="cursor: pointer;"></i>
+    </div>
+    <div class="mypost-info">
+      <div class="mypost-info-header">
+        <span class="mypost-info-header-sub">{{post.subredditName}} . </span>Posted By
+        <span class="mypost-info-header-user">{{post.userName}}</span>.
+        <span class="mypost-info-header-time">{{post.duration}}</span>.
+      </div>
+      <div class="mypost-info-main">
+        <div class="mypost-info-main-title">{{post.postName}}</div>
+        <div class="mypost-info-main-subtitle limit-text" [innerHTML]="post.description"> </div>
+      </div>
+      <div class="mypost-info-footer">
+        <div class="mypost-info-footer-commentIcon">
+          <i class="fa-solid fa-comments" style="color: #5e5a5c;cursor: pointer;"></i>
+        </div>
+        <div class="mypost-info-footer-title">Comments({{post.commentCount}})</div>
+        <button class="mypost-info-footer-btn" [routerLink]="'/viewPost/'+post.postId">Read Post</button>
+      </div>
+
+    </div>
+  </div>

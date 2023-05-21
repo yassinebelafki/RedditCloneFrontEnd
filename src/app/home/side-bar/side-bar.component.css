@@ -1,0 +1,47 @@
+.mysidebar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px 40px;
+  border: solid 0.001rem;
+  border-radius:5px ;
+  border-color: #D8D9CF;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  gap: 7px;
+}
+
+.mysidebar-img img {
+  width: 100%;
+}
+.mysidebar-main {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.mysidebar-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0 15px;
+  margin: 5px 0;
+}
+.mysidebar-footer button {
+  background-color: transparent;
+  border-color: #0079D3;
+  color: #0079D3;
+  border: 1px solid;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 9px 16px;
+  width: 100%;
+}
+.mysidebar-footer-createsubredditbtn button {
+  background-color: #0079D3;
+  color:#f8f9fa ;
+}

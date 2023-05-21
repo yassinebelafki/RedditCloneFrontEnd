@@ -1,0 +1,13 @@
+.main-container {
+  display: flex;
+}
+.mypostsContainer {
+  display: flex;
+  flex-basis: 70%;
+  flex-direction: column;
+}
+.side-container{
+  display: flex;
+
+  flex-direction: column;
+}

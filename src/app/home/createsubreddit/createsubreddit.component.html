@@ -1,0 +1,37 @@
+<div class="createSubContainer">
+  <div class="createSubContainer-form">
+    <div class="createSubContainer-form-header">
+      <span>Create Subreddit</span>
+    </div>
+    <div class="createSubContainer-form-main">
+        <form [formGroup]="createSubReddit" (ngSubmit)="submitSub()">
+          <input type="text" placeholder="Title" [formControlName]="'subTitle'">
+          <textarea placeholder="Description" [formControlName]="'subDescription'"></textarea>
+        </form>
+    </div>
+    <div class="createSubContainer-form-footer">
+      <button (click)="submitSub()" class="createsub-btn">Create Subreddit</button>
+      <button [routerLink]="'/'" class="discard-btn">Discard</button>
+    </div>
+  </div>
+  <div class="createSubContainer-disclaimer">
+
+    <div class="createSubContainer-disclaimer-header">
+      <span>Posting to Yassine's version of Reddit</span>
+    </div>
+
+    <div class="createSubContainer-disclaimer-footer">
+      <ul>
+        <li>Remember the human</li>
+        <hr />
+        <li>Behave like you would in real life</li>
+        <hr />
+        <li>Don't spam</li>
+        <hr />
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="myspinner" *ngIf="isloading">
+  <app-spinner></app-spinner>
+</div>

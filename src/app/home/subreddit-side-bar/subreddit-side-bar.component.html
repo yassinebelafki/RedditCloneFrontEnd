@@ -1,0 +1,12 @@
+<div class="subredditsidebard">
+  <div style="color: black; font-weight: bold">Browse Subreddits</div>
+  <hr />
+  <span *ngFor="let subreddit of subreddits">
+        <span class="subreddit-text"><a href="/view-subreddit/{{subreddit.id}}">{{subreddit.subRedditName}}</a></span>
+        <hr />
+    </span>
+  <div style="text-align: center;cursor: pointer"  >
+    <a style="font-weight: bold" routerLink="/subredditList">View All</a>
+  </div>
+</div>
+

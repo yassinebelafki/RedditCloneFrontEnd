@@ -1,0 +1,7 @@
+.comment-con {
+  padding: 10px;
+  border: solid 0.001rem;
+  border-radius:5px ;
+  border-color: #D8D9CF;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}

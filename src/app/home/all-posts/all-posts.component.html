@@ -1,0 +1,11 @@
+<div class="main-container">
+
+  <div class="mypostsContainer">
+    <app-single-post [post]="item" *ngFor="let item of postsList"></app-single-post>
+  </div>
+  <div class="side-container">
+  <app-side-bar></app-side-bar>
+    <app-subreddit-side-bar [subreddits]="subsList"></app-subreddit-side-bar>
+  </div>
+
+</div>
