@@ -62,9 +62,6 @@
   right: 20px;
   top: 75px;
 }
-.mynavbar-userprofile-list a {
-text-decoration: none;
-}
 
 
 .scale-up-center {
@@ -102,4 +99,9 @@ text-decoration: none;
     -webkit-transform: scale(1);
     transform: scale(1);
   }
+}
+
+.links {
+  text-decoration: none;
+
 }

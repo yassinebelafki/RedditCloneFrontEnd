@@ -27,6 +27,5 @@ export class HomeServiceService {
 
   getAllPostsByUser(name: string):Observable<Array<PostModel>> {
     return this.http.get<Array<PostModel>>("http://localhost:8080/api/posts/by-user/"+name)
-
   }
 }

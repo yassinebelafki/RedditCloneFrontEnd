@@ -2,10 +2,10 @@
   <div class="mypost">
     <div class="mypost-vote">
       <i class="fa-solid fa-arrow-up "  (mouseenter)="isHoveredOnArrowUp=true" (mouseleave)="isHoveredOnArrowUp=false"
-         [ngClass]="{'fa-bounce color-up':isHoveredOnArrowUp}" style="cursor: pointer;"></i>
+         [ngClass]="{'fa-bounce color-up':isHoveredOnArrowUp}" style="cursor: pointer;" (click)="upVote()"></i>
       <span class="mypost-vote-number">{{post.voteCount}}</span>
       <i class="fa-solid fa-arrow-down "  (mouseenter)="isHoveredOnArrowDown=true" (mouseleave)="isHoveredOnArrowDown=false"
-         [ngClass]="{'fa-bounce color-down':isHoveredOnArrowDown}" style="cursor: pointer;"></i>
+         [ngClass]="{'fa-bounce color-down':isHoveredOnArrowDown}" style="cursor: pointer;" (click)="downVote()"></i>
     </div>
     <div class="mypost-info">
       <div class="mypost-info-header">

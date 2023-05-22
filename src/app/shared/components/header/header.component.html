@@ -23,9 +23,9 @@
     <div class="mynavbar-userprofile" *ngIf="islogedin">
       <i  (click)="toggleMenu()" style="cursor: pointer" class="fa-solid fa-user fa-2xl"></i>
       <div *ngIf="menuToggeled" (click)="menuToggeled=false" class="mynavbar-userprofile-list scale-up-center">
-        <a [routerLink]="'/userProfile/'+getUsername()">Profile</a>
+        <a [routerLink]="'/userProfile/'+getUsername()" class="links">Profile</a>
         <hr>
-        <a (click)="logout()">Logout</a>
+        <a (click)="logout()" class="links" style="cursor: pointer">Logout</a>
       </div>
     </div>
   </div>

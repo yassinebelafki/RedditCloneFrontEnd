@@ -69,7 +69,7 @@ export class ViewPostComponent implements OnInit{
         console.log("comment posted");
           }
       ,error => {
-        console.log("err")
+        console.log("err comment")
         this.ngOnInit();
       }
     );
